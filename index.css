@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lilita One", sans-serif;
+    width: 100vw;
+    overflow-x: hidden; 
+  }
+  
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(76, 209, 149);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    z-index: 9999;
+  }
+  
+  /* MENÚ DE NAVEGACIÓN */
+  .navbar {
+    width: 100%;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+  
+  .navbar nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .navbar .left, .navbar .right {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .navbar .left {
+    margin-left: 10%;
+  }
+  
+  .navbar .right {
+    margin-right: 10%;
+  }
+  
+  .navbar .logo-nav {
+    width: 50px;
+    height: auto;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar nav ul li a:hover {
+    color: white;
+    background-color: rgb(251, 165, 212);
+    border-radius: 50%;
+    padding: 10px 15px;
+  }
+  
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1100;
+  }
+  
+  .menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+  }
+  /*presentación*/
+  .white-top {
+    padding-top: 95px;
+  }
+  .hello {
+    background-color: rgb(251, 165, 212);
+    color: rgb(251, 69, 69);
+    font-size: 350%;
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .hello p{
+    font-size: 100px;
+    padding-left: 2%;
+  }
+  
+  .ilustracion-fatima {
+  width: 30%;
+  height: 30%;
+  }
+  
+  /*TEXTO ANIMADO*/
+  
+  .typing-container {
+    font-size: 3vw; /* Tamaño responsivo */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(76, 209, 149);
+    text-align: center;
+  }
+  
+  .fixed-text {
+    margin-right: 10px;
+  }
+  
+  .dynamic-text {
+    color: rgb(251, 69, 69);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    min-width: 150px;
+  }
+  
+  /* COLLAGE */
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+  }
+  
+  .collage-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .collage img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .collage-item:hover .overlay {
+    opacity: 1;
+  }
+  /*SOBRE MI*/
+  
+  .sobre-mi {
+    background-color: rgb(251, 165, 212);
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+  }
+  
+  .sobre-mi img{
+    width: 70%;
+    padding-left: 5%;
+    filter: grayscale(100%);
+  }
+  .sobre-mi img:hover{
+    filter: none;
+  }
+  .name-fatima{
+    font-size: 300%;
+    color: rgb(251, 69, 69);
+    background-color:  rgb(251, 165, 212);
+    padding-left: 3%;
+  }
+  
+  .sobre-mi h2{
+    font-size: 200%;
+    color: rgb(251, 69, 69);
+  }
+  
+  .sobre-mi p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: white;
+  }
+  
+  .sobre-mi .info-derecha{
+    margin-right: 10%;
+    text-align: justify;
+  }
+  
+  .sobre-mi .info-izquierda {
+    display: flex;
+    flex-direction: column; /* Pone los elementos uno debajo del otro */
+    align-items: flex-start; /* Alinea a la izquierda */
+    gap: 10px; /* Espaciado entre los elementos */
+    margin-left: 3%;
+  }
+  
+  /*FOOTER*/
+  footer {
+    text-align: center;
+    background-color: rgb(76, 209, 149);
+    font-size: 50px;
+    color: white;
+  }
+  .iconos {
+   height: 100%;
+  }
+  #contactame-footer a {
+    text-decoration: none;  /* Elimina el subrayado del enlace */
+    color: white;  /* Mantiene el color blanco */
+  }
+  
+  #contactame-footer a:hover {
+    color: rgb(251, 165, 212); 
+  }
+  
+  
+  /* RESPONSIVE DESIGN */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 15px 20px;
+    }
+    .menu-toggle {
+      display: flex;
+    }
+    .navbar .left {
+      margin-left: 0%;
+    }
+    
+    .navbar .right {
+      margin-right: 0%;
+    }
+    .navbar nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      padding: 20px 0;
+    }
+  
+    .navbar.open nav ul {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+    }
+  
+    .navbar .left, .navbar .right {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .white-top {
+      padding-top: 40px;
+    }
+    .hello {
+      display: flex;
+      flex-direction: column;  /* Asegura que los elementos estén en columna */
+      justify-content: center; /* Centra el contenido verticalmente */
+      align-items: center;  /* Centra los elementos horizontalmente */
+      text-align: center; /* Asegura que el texto esté centrado */
+    }
+    
+    .hello p{
+      font-size: 70%;
+      padding-top: 5%;
+      padding-right: 1%;
+    }
+    .ilustracion-fatima {
+      width: 70%;
+      height: 70%;
+      }
+  
+      .typing-container {
+        font-size: 10vw;
+        width: 100%;
+        height: 80px;
+      }
+    .collage {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .sobre-mi {
+      display: block;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+    .name-fatima {
+      font-size: 120%;
+      justify-items: center;
+    }
+    .sobre-mi .info-derecha{
+      margin-right: 0%;
+      text-align: justify;
+      margin: 5%;
+    }
+    
+    .sobre-mi .info-izquierda {
+      display: flex;
+      flex-direction: column; /* Pone los elementos uno debajo del otro */
+      align-items: center; /* Alinea a la izquierda */
+      gap: 10px; /* Espaciado entre los elementos */
+      margin-left: 0%;
+    }
+    .sobre-mi img{
+      width: 70%;
+      padding-left: 0%;
+      filter: grayscale(100%);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .collage {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .navbar .logo-nav {
+      width: 60px;
+    }
+  }
+  

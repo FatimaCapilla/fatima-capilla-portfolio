@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .collage-individual {
+    column-count: 3;
+    column-gap: 10px;
+    padding: 2rem;
+  }
+  
+  .collage-individual img {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    object-fit: cover;
+    break-inside: avoid;
+  }
+  h1, h4 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 2%;
+    font-weight: 300; /* Peso más fino */
+  }
+  /* Estilos para el overlay */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+  
+  .lightbox.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .collage-individual img {
+    cursor: zoom-in;
+  }
+  .boton-externo {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .boton-externo:hover {
+    background-color: rgb(251, 165, 212);
+    color: white;
+  }
+  .ver-link {
+    align-items: right;
+    justify-content: right;
+    display: flex;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+
+  @media (max-width: 768px) {
+    .collage-individual {
+      column-count: 1;
+    }
+    h1 {
+        font-size: 150%;
+    }
+  }
+  
