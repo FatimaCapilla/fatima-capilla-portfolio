@@ -184,6 +184,33 @@
   .collage-item:hover .overlay {
     opacity: 1;
   }
+
+  .texto-collage {
+    text-align: center;
+    background-color: rgb(76, 209, 149);
+    color: white;
+  }
+
+  .contenedor-flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(76, 209, 149);
+    background-color: rgb(76, 209, 149);
+  }
+  
+  .flecha {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    transform: rotate(45deg); /* Gira la L para que apunte arriba */
+    margin: 20px;
+  }
+  
+  
+  
   /*SOBRE MI*/
   
   .sobre-mi {
