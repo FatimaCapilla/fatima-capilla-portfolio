@@ -50,6 +50,7 @@
     <span class="fixed-text">Diseñadora</span>
     <span class="dynamic-text"></span>
 </div>
+<div class="animado">
 <div id="collage-web" class="collage">
     <div class="collage-item">
         <img src="assets/web/web-alojamientos.png" alt="Imagen 1">
@@ -88,6 +89,8 @@
     <h1  class="texto-collage">WEB</h1>
         <span class="flecha"></span>
       </div>
+    </div>
+    <div class="animado">
         <div id="collage-grafico" class="collage">
             <a href="proyectos/grafico/revista.html">
             <div class="collage-item">
@@ -141,6 +144,8 @@
             <h1  class="texto-collage">GRÁFICO</h1>
                 <span class="flecha"></span>
               </div>
+            </div>
+            <div class="animado">
         <div id="collage-moda" class="collage">
             <a href="proyectos/moda/la-solea-mas-kitsch.html">
             <div class="collage-item">
@@ -196,7 +201,7 @@
         <h1  class="texto-collage">MODA</h1>
             <span class="flecha"></span>
           </div>
-          
+        </div>
 
         <!--SOBRE MI-->
         <div class="name-fatima">
@@ -216,10 +221,9 @@
                 estéticamente atractivas.</p>
             </div>
         </div>
-
         <!--FOOTER-->
         <footer id="contactame-footer">
-            <p>HABLEMOS PARA TRABAJAR JUNTOS</p>
+            <p class="texto-footer">HABLEMOS PARA TRABAJAR JUNTOS</p>
             <div class="iconos">
                 <a href="mailto:fatima.capilla.sancho@gmail.com">
                     <i class="fa-solid fa-envelope"></i></a>
@@ -285,5 +289,22 @@
 
     typeEffect();
 </script>
+<script>
+    const animados = document.querySelectorAll('.animado');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Solo animar una vez
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    animados.forEach(el => observer.observe(el));
+  </script>
+  
 </body>
 </html>

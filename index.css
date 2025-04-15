@@ -3,6 +3,17 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  .animado {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
   
   body {
     font-family: "Lilita One", sans-serif;
@@ -25,7 +36,6 @@
   /* MENÚ DE NAVEGACIÓN */
   .navbar {
     width: 100%;
-  
     position: fixed;
     top: 0;
     left: 0;
@@ -260,6 +270,9 @@
   }
   
   /*FOOTER*/
+  .texto-footer{
+    font-size: 50px;
+  }
   footer {
     text-align: center;
     background-color: rgb(76, 209, 149);
