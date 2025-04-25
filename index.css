@@ -4,17 +4,6 @@
     box-sizing: border-box;
   }
 
-  .animado {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-  }
-  
-  .animado.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
   body {
     font-family: "Lilita One", sans-serif;
     width: 100vw;

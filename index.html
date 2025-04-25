@@ -50,7 +50,6 @@
     <span class="fixed-text">Diseñadora</span>
     <span class="dynamic-text"></span>
 </div>
-<div class="animado">
 <div id="collage-web" class="collage">
     <div class="collage-item">
         <img src="assets/web/web-alojamientos.png" alt="Imagen 1">
@@ -80,17 +79,18 @@
         <img src="assets/web/web-toquen-el-dom.png" alt="Imagen 7">
         <div class="overlay">Paágina web de piano digital</div>
     </div>
+    <a href="proyectos/web/nexus-news.html">
     <div class="collage-item">
         <img src="assets/web/web-nexus-news.png" alt="Imagen 8">
         <div class="overlay">Diseño web para periodico digital</div>
     </div>
+</a>
 </div> 
 <div class="contenedor-flecha">
     <h1  class="texto-collage">WEB</h1>
         <span class="flecha"></span>
       </div>
     </div>
-    <div class="animado">
         <div id="collage-grafico" class="collage">
             <a href="proyectos/grafico/revista.html">
             <div class="collage-item">
@@ -145,7 +145,6 @@
                 <span class="flecha"></span>
               </div>
             </div>
-            <div class="animado">
         <div id="collage-moda" class="collage">
             <a href="proyectos/moda/la-solea-mas-kitsch.html">
             <div class="collage-item">
@@ -202,7 +201,6 @@
             <span class="flecha"></span>
           </div>
         </div>
-
         <!--SOBRE MI-->
         <div class="name-fatima">
             <h1>Fátima Capilla Sancho</h1>
@@ -289,22 +287,5 @@
 
     typeEffect();
 </script>
-<script>
-    const animados = document.querySelectorAll('.animado');
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Solo animar una vez
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-  
-    animados.forEach(el => observer.observe(el));
-  </script>
-  
 </body>
 </html>
