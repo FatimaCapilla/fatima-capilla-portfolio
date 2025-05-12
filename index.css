@@ -252,12 +252,56 @@
   
   .sobre-mi .info-izquierda {
     display: flex;
-    flex-direction: column; /* Pone los elementos uno debajo del otro */
-    align-items: flex-start; /* Alinea a la izquierda */
-    gap: 10px; /* Espaciado entre los elementos */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px; 
     margin-left: 3%;
   }
-  
+  .container-tech {
+    display: flex;
+    gap: 20px;
+  }
+  .tech-box,
+  .aptitudes-box,
+  .educacion-box {
+    border: 4px solid white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgb(251, 165, 212);
+    max-width: 90%;
+    justify-content: none;
+  }
+  .tech-box h2,
+.aptitudes-box h2,
+.educacion-box h2 {
+  margin-top: 0;
+  text-align: left;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.tech-box ul,
+.aptitudes-box ul,
+.educacion-box ul {
+  list-style: none;
+  padding: 0;
+  color: #ffffff;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.tech-box li,
+.aptitudes-box li,
+.educacion-box li {
+  padding: 6px 0;
+}
+
+.tech-box li:last-child,
+.aptitudes-box li:last-child,
+.educacion-box li:last-child {
+  border-bottom: none;
+}
+
   /*FOOTER*/
   .texto-footer{
     font-size: 50px;
@@ -369,15 +413,25 @@
     
     .sobre-mi .info-izquierda {
       display: flex;
-      flex-direction: column; /* Pone los elementos uno debajo del otro */
-      align-items: center; /* Alinea a la izquierda */
-      gap: 10px; /* Espaciado entre los elementos */
+      flex-direction: column;
+      align-items: center; 
+      gap: 10px;
       margin-left: 0%;
     }
     .sobre-mi img{
       width: 70%;
       padding-left: 0%;
       filter: grayscale(100%);
+    }
+    .container-tech {
+      flex-direction: column;
+      align-items: center; 
+    }
+  
+    .tech-box,
+    .aptitudes-box,
+    .educacion-box {
+      max-width: 90%; 
     }
   }
   
